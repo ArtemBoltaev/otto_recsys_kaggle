@@ -1,0 +1,73 @@
+[2023-01-20 14:25:52,894 I 52402 738714] (raylet) io_service_pool.cc:35: IOServicePool is running with 1 io_service.
+[2023-01-20 14:25:52,895 I 52402 738714] (raylet) store_runner.cc:32: Allowing the Plasma store to use up to 2.14748GB of memory.
+[2023-01-20 14:25:52,895 I 52402 738714] (raylet) store_runner.cc:48: Starting object store with directory /Users/Artem_Boltaev/Documents/EPAM Projects/7. RecSys_OTTO_Kaggle/source_code/otto_recsys_kaggle/notebooks/tmp, fallback tmp/, and huge page support disabled
+[2023-01-20 14:25:52,896 I 52402 738764] (raylet) dlmalloc.cc:154: create_and_mmap_buffer(2147483656, /Users/Artem_Boltaev/Documents/EPAM Projects/7. RecSys_OTTO_Kaggle/source_code/otto_recsys_kaggle/notebooks/tmp/plasmaXXXXXX)
+[2023-01-20 14:25:52,898 E 52402 738764] (raylet) logging.cc:97: Unhandled exception: N5boost10wrapexceptINS_6system12system_errorEEE. what(): Invalid argument
+[2023-01-20 14:25:52,898 E 52402 738714] (raylet) logging.cc:97: Unhandled exception: N5boost10wrapexceptINS_6system12system_errorEEE. what(): Invalid argument
+[2023-01-20 14:25:52,902 E 52402 738764] (raylet) logging.cc:104: Stack trace: 
+ 0   raylet                              0x0000000103ad2f31 _ZN3raylsERNSt3__113basic_ostreamIcNS0_11char_traitsIcEEEERKNS_10StackTraceE + 65 ray::operator<<()
+1   raylet                              0x0000000103ad30f1 _ZN3ray16TerminateHandlerEv + 209 ray::TerminateHandler()
+2   libc++abi.dylib                     0x00007ff8109754a5 _ZSt11__terminatePFvvE + 8 std::__terminate()
+3   libc++abi.dylib                     0x00007ff810977d05 __cxa_get_exception_ptr + 0 __cxa_get_exception_ptr
+4   libc++abi.dylib                     0x00007ff810977ccc _ZN10__cxxabiv1L22exception_cleanup_funcE19_Unwind_Reason_CodeP17_Unwind_Exception + 0 __cxxabiv1::exception_cleanup_func()
+5   raylet                              0x000000010411a9b8 _ZN5boost15throw_exceptionINS_6system12system_errorEEEvRKT_ + 56 boost::throw_exception<>()
+6   raylet                              0x000000010411a94c _ZN5boost4asio6detail14do_throw_errorERKNS_6system10error_codeE + 92 boost::asio::detail::do_throw_error()
+7   raylet                              0x000000010411c0f5 _ZN5boost4asio2ip12make_addressERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE + 85 boost::asio::ip::make_address()
+8   raylet                              0x0000000103adde0e _Z16ParseUrlEndpointRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEi + 2158 ParseUrlEndpoint()
+9   raylet                              0x00000001038244f7 _ZN6plasma11PlasmaStoreC2ER23instrumented_io_contextRNS_10IAllocatorERN3ray17FileSystemMonitorERKNSt3__112basic_stringIcNS8_11char_traitsIcEENS8_9allocatorIcEEEEjfNS8_8functionIFbvEEENSH_IFvvEEENSH_IFvRKNS5_10ObjectInfoEEEENSH_IFvRKNS5_8ObjectIDEEEE + 103 plasma::PlasmaStore::PlasmaStore()
+10  raylet                              0x000000010383058c _ZN6plasma17PlasmaStoreRunner5StartENSt3__18functionIFbvEEENS2_IFvvEEENS2_IFvRKN3ray10ObjectInfoEEEENS2_IFvRKNS7_8ObjectIDEEEE + 1692 plasma::PlasmaStoreRunner::Start()
+11  raylet                              0x00000001037d52d8 _ZNSt3__1L14__thread_proxyINS_5tupleIJNS_10unique_ptrINS_15__thread_structENS_14default_deleteIS3_EEEEMN6plasma17PlasmaStoreRunnerEFvNS_8functionIFbvEEENS9_IFvvEEENS9_IFvRKN3ray10ObjectInfoEEEENS9_IFvRKNSE_8ObjectIDEEEEEPS8_SB_SD_SJ_SO_EEEEEPvST_ + 408 std::__1::__thread_proxy<>()
+12  libsystem_pthread.dylib             0x00007ff8109bc259 _pthread_start + 125 _pthread_start
+13  libsystem_pthread.dylib             0x00007ff8109b7c7b thread_start + 15 thread_start
+
+[2023-01-20 14:25:52,905 E 52402 738714] (raylet) logging.cc:104: Stack trace: 
+ 0   raylet                              0x0000000103ad2f31 _ZN3raylsERNSt3__113basic_ostreamIcNS0_11char_traitsIcEEEERKNS_10StackTraceE + 65 ray::operator<<()
+1   raylet                              0x0000000103ad30f1 _ZN3ray16TerminateHandlerEv + 209 ray::TerminateHandler()
+2   libc++abi.dylib                     0x00007ff8109754a5 _ZSt11__terminatePFvvE + 8 std::__terminate()
+3   libc++abi.dylib                     0x00007ff810977d05 __cxa_get_exception_ptr + 0 __cxa_get_exception_ptr
+4   libc++abi.dylib                     0x00007ff810977ccc _ZN10__cxxabiv1L22exception_cleanup_funcE19_Unwind_Reason_CodeP17_Unwind_Exception + 0 __cxxabiv1::exception_cleanup_func()
+5   raylet                              0x000000010411a9b8 _ZN5boost15throw_exceptionINS_6system12system_errorEEEvRKT_ + 56 boost::throw_exception<>()
+6   raylet                              0x000000010411a94c _ZN5boost4asio6detail14do_throw_errorERKNS_6system10error_codeE + 92 boost::asio::detail::do_throw_error()
+7   raylet                              0x000000010411c0f5 _ZN5boost4asio2ip12make_addressERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE + 85 boost::asio::ip::make_address()
+8   raylet                              0x0000000103adde0e _Z16ParseUrlEndpointRKNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEi + 2158 ParseUrlEndpoint()
+9   raylet                              0x0000000103a09e79 _ZN3ray18ConnectSocketRetryERN5boost4asio19basic_stream_socketINS1_7generic15stream_protocolENS1_9execution12any_executorIJNS5_12context_as_tIRNS1_17execution_contextEEENS5_6detail8blocking7never_tILi0EEENS5_11prefer_onlyINSC_10possibly_tILi0EEEEENSF_INSB_16outstanding_work9tracked_tILi0EEEEENSF_INSJ_11untracked_tILi0EEEEENSF_INSB_12relationship6fork_tILi0EEEEENSF_INSQ_14continuation_tILi0EEEEEEEEEERKNSt3__112basic_stringIcNS10_11char_traitsIcEENS10_9allocatorIcEEEEix + 441 ray::ConnectSocketRetry()
+10  raylet                              0x0000000103836278 _ZN6plasma12PlasmaClient4Impl7ConnectERKNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEESA_ii + 104 plasma::PlasmaClient::Impl::Connect()
+11  raylet                              0x0000000103836992 _ZN6plasma12PlasmaClient7ConnectERKNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEES9_ii + 18 plasma::PlasmaClient::Connect()
+12  raylet                              0x00000001037bd105 _ZN3ray13ObjectManagerC2ER23instrumented_io_contextRKNS_6NodeIDERKNS_19ObjectManagerConfigEPNS_16IObjectDirectoryENSt3__18functionIFvRKNS_8ObjectIDExRKNSB_12basic_stringIcNSB_11char_traitsIcEENSB_9allocatorIcEEEENSC_IFvRKNS_6StatusEEEEEEENSC_IFSL_SF_EEENSC_IFbvEEENSC_IFvvEEENSC_IFvRKNS_10ObjectInfoEEEENSC_IFvSF_EEENSC_IFNSB_10unique_ptrINS_9RayObjectENSB_14default_deleteIS19_EEEESF_EEENSC_IFvSF_NS_3rpc9ErrorTypeEEEE + 3733 ray::ObjectManager::ObjectManager()
+13  raylet                              0x00000001036cf79a _ZN3ray6raylet11NodeManagerC2ER23instrumented_io_contextRKNS_6NodeIDERKNSt3__112basic_stringIcNS7_11char_traitsIcEENS7_9allocatorIcEEEERKNS0_17NodeManagerConfigERKNS_19ObjectManagerConfigENS7_10shared_ptrINS_3gcs9GcsClientEEE + 1722 ray::raylet::NodeManager::NodeManager()
+14  raylet                              0x0000000103730988 _ZN3ray6raylet6RayletC2ER23instrumented_io_contextRKNSt3__112basic_stringIcNS4_11char_traitsIcEENS4_9allocatorIcEEEESC_SC_RKNS0_17NodeManagerConfigERKNS_19ObjectManagerConfigENS4_10shared_ptrINS_3gcs9GcsClientEEEi + 456 ray::raylet::Raylet::Raylet()
+15  raylet                              0x000000010368c69d _ZZ4mainENK3$_1clEN3ray6StatusERKN5boost8optionalINSt3__112basic_stringIcNS4_11char_traitsIcEENS4_9allocatorIcEEEEEE + 9005 main::$_1::operator()()
+16  raylet                              0x000000010368a2ed _ZNSt3__110__function6__funcIZ4mainE3$_1NS_9allocatorIS2_EEFvN3ray6StatusERKN5boost8optionalINS_12basic_stringIcNS_11char_traitsIcEENS3_IcEEEEEEEEclEOS6_SG_ + 93 std::__1::__function::__func<>::operator()()
+17  raylet                              0x00000001038f81f9 _ZNSt3__110__function6__funcIZN3ray3gcs16NodeInfoAccessor22AsyncGetInternalConfigERKNS_8functionIFvNS2_6StatusERKN5boost8optionalINS_12basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEEEEEEEE4$_34NSC_ISM_EEFvRKS6_RKNS2_3rpc22GetInternalConfigReplyEEEclESP_ST_ + 521 std::__1::__function::__func<>::operator()()
+18  raylet                              0x00000001038c3fcb _ZZN3ray3rpc12GcsRpcClient17GetInternalConfigERKNS0_24GetInternalConfigRequestERKNSt3__18functionIFvRKNS_6StatusERKNS0_22GetInternalConfigReplyEEEExENKUlS9_SC_E_clES9_SC_ + 603 ray::rpc::GcsRpcClient::GetInternalConfig()::{lambda()#1}::operator()()
+19  raylet                              0x00000001038c378c _ZN3ray3rpc14ClientCallImplINS0_22GetInternalConfigReplyEE15OnReplyReceivedEv + 92 ray::rpc::ClientCallImpl<>::OnReplyReceived()
+20  raylet                              0x00000001039043c6 _ZNSt3__110__function6__funcIZN3ray3rpc17ClientCallManager29PollEventsFromCompletionQueueEiEUlvE_NS_9allocatorIS5_EEFvvEEclEv + 22 std::__1::__function::__func<>::operator()()
+21  raylet                              0x0000000103a1da26 _ZN12EventTracker15RecordExecutionERKNSt3__18functionIFvvEEENS0_10shared_ptrI11StatsHandleEE + 86 EventTracker::RecordExecution()
+22  raylet                              0x00000001039f1b20 _ZNSt3__110__function6__funcIZN23instrumented_io_context4postENS_8functionIFvvEEENS_10shared_ptrI11StatsHandleEEE3$_1NS_9allocatorIS9_EES4_EclEv + 48 std::__1::__function::__func<>::operator()()
+23  raylet                              0x00000001039f0497 _ZN5boost4asio6detail18completion_handlerINSt3__18functionIFvvEEENS0_10io_context19basic_executor_typeINS3_9allocatorIvEELj0EEEE11do_completeEPvPNS1_19scheduler_operationERKNS_6system10error_codeEm + 167 boost::asio::detail::completion_handler<>::do_complete()
+24  raylet                              0x0000000104112b55 _ZN5boost4asio6detail9scheduler10do_run_oneERNS1_27conditionally_enabled_mutex11scoped_lockERNS1_21scheduler_thread_infoERKNS_6system10error_codeE + 725 boost::asio::detail::scheduler::do_run_one()
+25  raylet                              0x0000000104109181 _ZN5boost4asio6detail9scheduler3runERNS_6system10error_codeE + 241 boost::asio::detail::scheduler::run()
+26  raylet                              0x000000010410907b _ZN5boost4asio10io_context3runEv + 43 boost::asio::io_context::run()
+27  raylet                              0x0000000103685453 main + 3683 main
+28  dyld                                0x00007ff810689310 start + 2432 start
+
+[2023-01-20 14:25:52,908 E 52402 738764] (raylet) logging.cc:361: *** SIGABRT received at time=1674221152 ***
+[2023-01-20 14:25:52,908 E 52402 738764] (raylet) logging.cc:361: PC: @     0x7ff81098422a  (unknown)  __pthread_kill
+[2023-01-20 14:25:52,908 E 52402 738764] (raylet) logging.cc:361:     @        0x103ae6aa4  (unknown)  absl::lts_20211102::WriteFailureInfo()
+[2023-01-20 14:25:52,908 E 52402 738764] (raylet) logging.cc:361:     @        0x103ae6822  (unknown)  absl::lts_20211102::AbslFailureSignalHandler()
+[2023-01-20 14:25:52,908 E 52402 738764] (raylet) logging.cc:361:     @     0x7ff8109e6c1d  (unknown)  _sigtramp
+[2023-01-20 14:25:52,908 E 52402 738764] (raylet) logging.cc:361:     @        0x105041380  (unknown)  0x0
+[2023-01-20 14:25:52,908 E 52402 738764] (raylet) logging.cc:361:     @     0x7ff810905ca5  (unknown)  abort
+[2023-01-20 14:25:52,908 E 52402 738764] (raylet) logging.cc:361:     @        0x103ad3121  (unknown)  ray::TerminateHandler()
+[2023-01-20 14:25:52,908 E 52402 738764] (raylet) logging.cc:361:     @     0x7ff8109754a5  (unknown)  std::__terminate()
+[2023-01-20 14:25:52,908 E 52402 738764] (raylet) logging.cc:361:     @     0x7ff810977d05  (unknown)  __cxxabiv1::failed_throw()
+[2023-01-20 14:25:52,908 E 52402 738764] (raylet) logging.cc:361:     @     0x7ff810977ccc  (unknown)  __cxa_throw
+[2023-01-20 14:25:52,908 E 52402 738764] (raylet) logging.cc:361:     @        0x10411a9b8  (unknown)  boost::throw_exception<>()
+[2023-01-20 14:25:52,908 E 52402 738764] (raylet) logging.cc:361:     @        0x10411a94c  (unknown)  boost::asio::detail::do_throw_error()
+[2023-01-20 14:25:52,908 E 52402 738764] (raylet) logging.cc:361:     @        0x10411c0f5  (unknown)  boost::asio::ip::make_address()
+[2023-01-20 14:25:52,909 E 52402 738764] (raylet) logging.cc:361:     @        0x103adde0e  (unknown)  ParseUrlEndpoint()
+[2023-01-20 14:25:52,909 E 52402 738764] (raylet) logging.cc:361:     @        0x1038244f7  (unknown)  plasma::PlasmaStore::PlasmaStore()
+[2023-01-20 14:25:52,909 E 52402 738764] (raylet) logging.cc:361:     @        0x10383058c  (unknown)  plasma::PlasmaStoreRunner::Start()
+[2023-01-20 14:25:52,909 E 52402 738764] (raylet) logging.cc:361:     @        0x1037d52d8  (unknown)  std::__1::__thread_proxy<>()
+[2023-01-20 14:25:52,909 E 52402 738764] (raylet) logging.cc:361:     @     0x7ff8109bc259  (unknown)  _pthread_start
+[2023-01-20 14:25:52,909 E 52402 738764] (raylet) logging.cc:361:     @     0x7ff8109b7c7b  (unknown)  thread_start

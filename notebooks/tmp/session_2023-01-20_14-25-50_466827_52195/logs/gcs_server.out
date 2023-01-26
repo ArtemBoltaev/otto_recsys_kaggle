@@ -1,0 +1,162 @@
+[2023-01-20 14:25:50,536 I 52395 738482] (gcs_server) io_service_pool.cc:35: IOServicePool is running with 1 io_service.
+[2023-01-20 14:25:50,539 I 52395 738482] (gcs_server) gcs_server.cc:60: GCS storage type is memory
+[2023-01-20 14:25:50,539 I 52395 738482] (gcs_server) gcs_init_data.cc:44: Loading job table data.
+[2023-01-20 14:25:50,540 I 52395 738482] (gcs_server) gcs_init_data.cc:56: Loading node table data.
+[2023-01-20 14:25:50,540 I 52395 738482] (gcs_server) gcs_init_data.cc:68: Loading cluster resources table data.
+[2023-01-20 14:25:50,540 I 52395 738482] (gcs_server) gcs_init_data.cc:95: Loading actor table data.
+[2023-01-20 14:25:50,540 I 52395 738482] (gcs_server) gcs_init_data.cc:108: Loading actor task spec table data.
+[2023-01-20 14:25:50,540 I 52395 738482] (gcs_server) gcs_init_data.cc:81: Loading placement group table data.
+[2023-01-20 14:25:50,540 I 52395 738482] (gcs_server) gcs_init_data.cc:48: Finished loading job table data, size = 0
+[2023-01-20 14:25:50,540 I 52395 738482] (gcs_server) gcs_init_data.cc:60: Finished loading node table data, size = 0
+[2023-01-20 14:25:50,540 I 52395 738482] (gcs_server) gcs_init_data.cc:72: Finished loading cluster resources table data, size = 0
+[2023-01-20 14:25:50,540 I 52395 738482] (gcs_server) gcs_init_data.cc:99: Finished loading actor table data, size = 0
+[2023-01-20 14:25:50,540 I 52395 738482] (gcs_server) gcs_init_data.cc:112: Finished loading actor task spec table data, size = 0
+[2023-01-20 14:25:50,540 I 52395 738482] (gcs_server) gcs_init_data.cc:86: Finished loading placement group table data, size = 0
+[2023-01-20 14:25:50,545 I 52395 738482] (gcs_server) grpc_server.cc:120: GcsServer server started, listening on port 57210.
+[2023-01-20 14:25:50,559 I 52395 738482] (gcs_server) gcs_server.cc:193: GcsNodeManager: 
+- RegisterNode request count: 0
+- DrainNode request count: 0
+- GetAllNodeInfo request count: 0
+- GetInternalConfig request count: 0
+
+GcsActorManager: 
+- RegisterActor request count: 0
+- CreateActor request count: 0
+- GetActorInfo request count: 0
+- GetNamedActorInfo request count: 0
+- GetAllActorInfo request count: 0
+- KillActor request count: 0
+- ListNamedActors request count: 0
+- Registered actors count: 0
+- Destroyed actors count: 0
+- Named actors count: 0
+- Unresolved actors count: 0
+- Pending actors count: 0
+- Created actors count: 0
+- owners_: 0
+- actor_to_register_callbacks_: 0
+- actor_to_create_callbacks_: 0
+- sorted_destroyed_actor_list_: 0
+
+GcsResourceManager: 
+- GetResources request count: 0
+- GetAllAvailableResources request count0
+- ReportResourceUsage request count: 0
+- GetAllResourceUsage request count: 0
+
+GcsPlacementGroupManager: 
+- CreatePlacementGroup request count: 0
+- RemovePlacementGroup request count: 0
+- GetPlacementGroup request count: 0
+- GetAllPlacementGroup request count: 0
+- WaitPlacementGroupUntilReady request count: 0
+- GetNamedPlacementGroup request count: 0
+- Scheduling pending placement group count: 0
+- Registered placement groups count: 0
+- Named placement group count: 0
+- Pending placement groups count: 0
+- Infeasible placement groups count: 0
+
+GcsPublisher {}
+
+[runtime env manager] ID to URIs table:
+[runtime env manager] URIs reference table:
+
+GrpcBasedResourceBroadcaster:
+- Tracked nodes: 0
+[2023-01-20 14:25:50,559 I 52395 738482] (gcs_server) gcs_server.cc:788: Event stats:
+
+
+Global stats: 13 total (4 active)
+Queueing time: mean = 2.938 ms, max = 18.828 ms, min = 6.000 us, total = 38.191 ms
+Execution time:  mean = 1.458 ms, total = 18.956 ms
+Event stats:
+	GcsInMemoryStore.GetAll - 6 total (0 active), CPU time: mean = 3.155 ms, total = 18.932 ms
+	PeriodicalRunner.RunFnPeriodically - 4 total (2 active, 1 running), CPU time: mean = 5.000 us, total = 20.000 us
+	RaySyncer.deadline_timer.report_resource_report - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+	GcsInMemoryStore.Put - 1 total (0 active), CPU time: mean = 4.000 us, total = 4.000 us
+	RayletLoadPulled - 1 total (1 active), CPU time: mean = 0.000 s, total = 0.000 s
+
+
+[2023-01-20 14:26:00,564 W 52395 738484] (gcs_server) metric_exporter.cc:209: [1] Export metrics to agent failed: GrpcUnavailable: RPC Error message: failed to connect to all addresses; RPC Error details: . This won't affect Ray, but you can lose metrics from the cluster.
+[2023-01-20 14:26:50,560 I 52395 738482] (gcs_server) gcs_server.cc:193: GcsNodeManager: 
+- RegisterNode request count: 0
+- DrainNode request count: 0
+- GetAllNodeInfo request count: 409
+- GetInternalConfig request count: 1
+
+GcsActorManager: 
+- RegisterActor request count: 0
+- CreateActor request count: 0
+- GetActorInfo request count: 0
+- GetNamedActorInfo request count: 0
+- GetAllActorInfo request count: 1
+- KillActor request count: 0
+- ListNamedActors request count: 0
+- Registered actors count: 0
+- Destroyed actors count: 0
+- Named actors count: 0
+- Unresolved actors count: 0
+- Pending actors count: 0
+- Created actors count: 0
+- owners_: 0
+- actor_to_register_callbacks_: 0
+- actor_to_create_callbacks_: 0
+- sorted_destroyed_actor_list_: 0
+
+GcsResourceManager: 
+- GetResources request count: 0
+- GetAllAvailableResources request count0
+- ReportResourceUsage request count: 0
+- GetAllResourceUsage request count: 12
+
+GcsPlacementGroupManager: 
+- CreatePlacementGroup request count: 0
+- RemovePlacementGroup request count: 0
+- GetPlacementGroup request count: 0
+- GetAllPlacementGroup request count: 0
+- WaitPlacementGroupUntilReady request count: 0
+- GetNamedPlacementGroup request count: 0
+- Scheduling pending placement group count: 0
+- Registered placement groups count: 0
+- Named placement group count: 0
+- Pending placement groups count: 0
+- Infeasible placement groups count: 0
+
+GcsPublisher {}
+
+[runtime env manager] ID to URIs table:
+[runtime env manager] URIs reference table:
+
+GrpcBasedResourceBroadcaster:
+- Tracked nodes: 0
+[2023-01-20 14:26:50,560 I 52395 738482] (gcs_server) gcs_server.cc:788: Event stats:
+
+
+Global stats: 1252 total (4 active)
+Queueing time: mean = 436.974 us, max = 18.828 ms, min = 6.000 us, total = 547.092 ms
+Execution time:  mean = 85.274 us, total = 106.763 ms
+Event stats:
+	RaySyncer.deadline_timer.report_resource_report - 596 total (1 active), CPU time: mean = 54.172 us, total = 32.286 ms
+	NodeInfoGcsService.grpc_server.GetAllNodeInfo - 409 total (0 active), CPU time: mean = 98.346 us, total = 40.224 ms
+	RayletLoadPulled - 60 total (1 active), CPU time: mean = 8.289 us, total = 497.328 us
+	GcsInMemoryStore.Get - 48 total (0 active), CPU time: mean = 68.296 us, total = 3.278 ms
+	InternalKVGcsService.grpc_server.InternalKVGet - 47 total (0 active), CPU time: mean = 32.250 us, total = 1.516 ms
+	GcsInMemoryStore.Put - 24 total (0 active), CPU time: mean = 51.467 us, total = 1.235 ms
+	InternalKVGcsService.grpc_server.InternalKVPut - 23 total (0 active), CPU time: mean = 25.046 us, total = 576.066 us
+	NodeResourceInfoGcsService.grpc_server.GetAllResourceUsage - 12 total (0 active), CPU time: mean = 78.417 us, total = 941.004 us
+	NodeInfoGcsService.grpc_server.CheckAlive - 12 total (0 active), CPU time: mean = 75.545 us, total = 906.540 us
+	GCSServer.deadline_timer.debug_state_dump - 6 total (1 active), CPU time: mean = 951.440 us, total = 5.709 ms
+	GcsInMemoryStore.GetAll - 6 total (0 active), CPU time: mean = 3.155 ms, total = 18.932 ms
+	PeriodicalRunner.RunFnPeriodically - 4 total (0 active), CPU time: mean = 131.000 us, total = 524.000 us
+	NodeInfoGcsService.grpc_server.GetInternalConfig - 1 total (0 active), CPU time: mean = 19.826 us, total = 19.826 us
+	InternalKVGcsService.grpc_server.InternalKVDel - 1 total (0 active), CPU time: mean = 16.721 us, total = 16.721 us
+	GcsInMemoryStore.Delete - 1 total (0 active), CPU time: mean = 52.128 us, total = 52.128 us
+	ActorInfoGcsService.grpc_server.GetAllActorInfo - 1 total (0 active), CPU time: mean = 49.723 us, total = 49.723 us
+	GCSServer.deadline_timer.debug_state_event_stats_print - 1 total (1 active, 1 running), CPU time: mean = 0.000 s, total = 0.000 s
+
+
+[2023-01-20 14:27:39,566 I 52395 738482] (gcs_server) gcs_server_main.cc:108: GCS server received SIGTERM, shutting down...
+[2023-01-20 14:27:39,566 I 52395 738482] (gcs_server) gcs_server.cc:215: Stopping GCS server.
+[2023-01-20 14:27:39,579 I 52395 738482] (gcs_server) gcs_server.cc:239: GCS server stopped.
+[2023-01-20 14:27:39,579 I 52395 738482] (gcs_server) io_service_pool.cc:47: IOServicePool is stopped.
